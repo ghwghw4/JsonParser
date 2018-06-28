@@ -9,8 +9,7 @@
 #import "GICViewController.h"
 #import "GICJsonParser.h"
 #import "TestObject.h"
-#import <JsonParser/GICJsonParser.h>
-#import <JsonParser/NSString+Extension.h>
+#import <GICJsonParser/GICJsonParser.h>
 
 @interface GICViewController ()
 

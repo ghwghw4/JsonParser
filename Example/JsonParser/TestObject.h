@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TestObject2.h"
-#import <JsonParser/GICJsonParserDelegate.h>
+#import <GICJsonParser/GICJsonParserDelegate.h>
 
 @interface TestObject : NSObject<GICJsonParserDelegate>
 @property (nonatomic,assign)int8_t testInt8;
