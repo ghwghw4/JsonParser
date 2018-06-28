@@ -10,6 +10,11 @@
 #endif
 #endif
 
+#import "GICJsonParser.h"
+#import "GICJsonParserDelegate.h"
+#import "GICReflectorPropertyInfo.h"
+#import "NSObject+Reflector.h"
+#import "NSString+Extension.h"
 
 FOUNDATION_EXPORT double JsonParserVersionNumber;
 FOUNDATION_EXPORT const unsigned char JsonParserVersionString[];

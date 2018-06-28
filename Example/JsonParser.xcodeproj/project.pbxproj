@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A6027B8CB4E0E67F2604B3C /* Pods_JsonParser_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E428F1A28D41FD867559210A /* Pods_JsonParser_Example.framework */; };
+		3743F91D20E39B430067BE28 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3743F91C20E39B430067BE28 /* TestObject.m */; };
+		37A2640720E48DC90058589D /* TestJsonParser.json in Resources */ = {isa = PBXBuildFile; fileRef = 37A2640620E48DC90058589D /* TestJsonParser.json */; };
+		37A2640A20E48F8A0058589D /* TestObject2.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2640920E48F8A0058589D /* TestObject2.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -25,6 +28,11 @@
 		168689A3895EEE60F5C1DDFD /* Pods-JsonParser_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JsonParser_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JsonParser_Tests/Pods-JsonParser_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		21D3CB9D5ABBD55B3FB3BC3F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		29F83611B449ED3EEBD24BE9 /* Pods_JsonParser_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JsonParser_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3743F91B20E39B430067BE28 /* TestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
+		3743F91C20E39B430067BE28 /* TestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
+		37A2640620E48DC90058589D /* TestJsonParser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestJsonParser.json; sourceTree = "<group>"; };
+		37A2640820E48F8A0058589D /* TestObject2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestObject2.h; sourceTree = "<group>"; };
+		37A2640920E48F8A0058589D /* TestObject2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestObject2.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* JsonParser_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonParser_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -106,6 +114,11 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				3743F91B20E39B430067BE28 /* TestObject.h */,
+				3743F91C20E39B430067BE28 /* TestObject.m */,
+				37A2640620E48DC90058589D /* TestJsonParser.json */,
+				37A2640820E48F8A0058589D /* TestObject2.h */,
+				37A2640920E48F8A0058589D /* TestObject2.m */,
 			);
 			name = "Example for JsonParser";
 			path = JsonParser;
@@ -207,6 +220,7 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				37A2640720E48DC90058589D /* TestJsonParser.json in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -275,6 +289,8 @@
 			files = (
 				6003F59E195388D20070C39A /* GICAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* GICViewController.m in Sources */,
+				37A2640A20E48F8A0058589D /* TestObject2.m in Sources */,
+				3743F91D20E39B430067BE28 /* TestObject.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

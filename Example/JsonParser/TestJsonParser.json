@@ -1,0 +1,35 @@
+{
+    "testInt8": -23,
+    "testInt16": -1234,
+    "testInt32": -1234,
+    "testInt": -1234,
+    "testUInt8": 23,
+    "testUInt16": 1234,
+    "testUInt32": 1234,
+    "testUInt": 1234,
+    "testDouble": 3.1415926,
+    "testFloat": 3.1415926,
+    "testBool": true,
+    "testNumber": 6789,
+    "testString": "hello",
+    "testStringToInt": "123",
+    "testStringToBool": "1",
+    "testNumberToString": 3.1415926,
+    "testCustomObject": {
+        "id": 12,
+        "name": "海伟"
+    },
+    "testDict": {
+        "a": 1,
+        "b": "b"
+    },
+    "testArrayObject": [{
+                        "id": 1,
+                        "name": "海伟1"
+                        }, {
+                        "id": 2,
+                        "name": "海伟2"
+                        }],
+    "testArrayString": ["a", "b", "c"],
+    "testArrayNumber": [1, -2, 3.1315]
+}
