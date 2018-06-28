@@ -45,4 +45,6 @@
 
 @property (nonatomic,strong)NSArray<NSString *> *testArrayString;
 @property (nonatomic,strong)NSArray<NSNumber *> *testArrayNumber;
+
+@property (nonatomic,copy)NSString *customPropertyName;
 @end

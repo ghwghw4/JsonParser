@@ -1,5 +1,5 @@
 PODS:
-  - JsonParser (1.0.0)
+  - JsonParser (0.5.0)
 
 DEPENDENCIES:
   - JsonParser (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  JsonParser: 5ab46293042acbb732627d8f514b5f75bfee6550
+  JsonParser: 3d2653afd2d161e9ac1c7d49995aade45546b845
 
 PODFILE CHECKSUM: c59984cbfcfbfa25d21bdd3c7928d63b8dfd5a6c
 

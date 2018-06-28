@@ -36,8 +36,8 @@
 
 /* Begin PBXFileReference section */
 		040E0B7E658A3D44D0107EDAB3AF05AF /* Pods-JsonParser_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JsonParser_Example-dummy.m"; sourceTree = "<group>"; };
-		08949E66F78B8074AD0D4E16B334EB02 /* JsonParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JsonParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C4CE59A3467CBB304B1D3EE422B9AF8 /* Pods_JsonParser_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JsonParser_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08949E66F78B8074AD0D4E16B334EB02 /* JsonParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JsonParser.framework; path = JsonParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C4CE59A3467CBB304B1D3EE422B9AF8 /* Pods_JsonParser_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JsonParser_Example.framework; path = "Pods-JsonParser_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2394BB33470CFCCE46C0CC6BFF3B8F78 /* Pods-JsonParser_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JsonParser_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3CC84D59AEA69C906907CF2A191A2E08 /* GICJsonParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GICJsonParser.m; path = JsonParser/Classes/GICJsonParser.m; sourceTree = "<group>"; };
 		547DFB76698B88CB3E6CC59C7B0C6367 /* GICJsonParserDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GICJsonParserDelegate.h; path = JsonParser/Classes/GICJsonParserDelegate.h; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 		8879AB57B20F8C4DDE4EC50D25C7DE2C /* JsonParser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JsonParser-umbrella.h"; sourceTree = "<group>"; };
 		8B4F381F6518DF25F6176F2DE4E12660 /* JsonParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JsonParser-prefix.pch"; sourceTree = "<group>"; };
 		8CF49F10CB55C82ED17E8148AEE07EE7 /* JsonParser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JsonParser.modulemap; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95B46205F2621E701EF2DD95FEF88E47 /* Pods-JsonParser_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JsonParser_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9EB8E7D59656A5F4D8C7EB17D8C141DB /* NSObject+Reflector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Reflector.m"; path = "JsonParser/Classes/NSObject+Reflector.m"; sourceTree = "<group>"; };
 		A2DCF14EBA87B17F8A36E99BA9CF7390 /* GICReflectorPropertyInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GICReflectorPropertyInfo.m; path = JsonParser/Classes/GICReflectorPropertyInfo.m; sourceTree = "<group>"; };

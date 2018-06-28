@@ -31,5 +31,6 @@
                         "name": "海伟2"
                         }],
     "testArrayString": ["a", "b", "c"],
-    "testArrayNumber": [1, -2, 3.1315]
+    "testArrayNumber": [1, -2, 3.1315],
+    "testCustomPropertyNameMap": "CustomPropertyName"
 }

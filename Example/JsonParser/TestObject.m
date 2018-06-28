@@ -15,4 +15,8 @@
     }
     return nil;
 }
+
+- (NSDictionary<NSString *,NSString *> *)jsonParsePropertNameMap{
+    return @{@"testCustomPropertyNameMap":@"customPropertyName"};
+}
 @end

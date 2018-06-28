@@ -25,6 +25,16 @@
  *  @param jsonDict 该类对应的json字典
  */
 - (void)jsonParseObjetCompelete:(NSDictionary *)jsonDict;
+
+
+/**
+ 获取自定义的属性名跟json dictionary key的映射。
+ key:json dictionary key
+ value:实际对应的属性名称
+
+ @return <#return value description#>
+ */
+- (NSDictionary<NSString *,NSString *> *)jsonParsePropertNameMap;
 @end
 
 #endif /* GICJsonParserDelegate_h */
