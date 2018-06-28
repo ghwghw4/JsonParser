@@ -32,6 +32,8 @@
             propertyName = [propertyNameMap objectForKey:key];
         }
         GICReflectorPropertyInfo *pInfo = [properties objectForKey:propertyName];
+        if(pInfo.isReadOnly)
+            continue;
         id value = [jsonDict objectForKey:key];
         switch (pInfo.propertyType) {
             case GICPropertyType_Int:
