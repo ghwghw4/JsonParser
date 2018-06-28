@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## JsonParser
+## GICJsonParser
 
 Copyright (c) 2018 龚海伟 <dagehaoshuang@163.com>
 

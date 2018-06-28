@@ -16,6 +16,6 @@
 #import "NSObject+Reflector.h"
 #import "NSString+Extension.h"
 
-FOUNDATION_EXPORT double JsonParserVersionNumber;
-FOUNDATION_EXPORT const unsigned char JsonParserVersionString[];
+FOUNDATION_EXPORT double GICJsonParserVersionNumber;
+FOUNDATION_EXPORT const unsigned char GICJsonParserVersionString[];
 

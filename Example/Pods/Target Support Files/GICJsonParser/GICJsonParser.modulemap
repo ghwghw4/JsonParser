@@ -1,0 +1,6 @@
+framework module GICJsonParser {
+  umbrella header "GICJsonParser-umbrella.h"
+
+  export *
+  module * { export * }
+}

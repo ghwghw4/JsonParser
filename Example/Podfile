@@ -1,5 +1,5 @@
 use_frameworks!
 
 target 'JsonParser_Example' do
-  pod 'JsonParser', :path => '../'
+  pod 'GICJsonParser', :path => '../'
 end

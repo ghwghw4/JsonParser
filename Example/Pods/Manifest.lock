@@ -1,16 +1,16 @@
 PODS:
-  - JsonParser (0.5.0)
+  - GICJsonParser (0.5.0)
 
 DEPENDENCIES:
-  - JsonParser (from `../`)
+  - GICJsonParser (from `../`)
 
 EXTERNAL SOURCES:
-  JsonParser:
+  GICJsonParser:
     :path: ../
 
 SPEC CHECKSUMS:
-  JsonParser: 1cea15a92deda7a27bdcedfa37733bc416b4ecb0
+  GICJsonParser: 0422048046280a16c56a6df3109135561c29f706
 
-PODFILE CHECKSUM: c59984cbfcfbfa25d21bdd3c7928d63b8dfd5a6c
+PODFILE CHECKSUM: 1ee78120ed7cccf78dcf859ef9ce8a54b58f55e7
 
 COCOAPODS: 1.3.1
