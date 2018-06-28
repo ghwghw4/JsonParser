@@ -23,10 +23,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     NSData *jsonData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle].bundlePath stringByAppendingPathComponent:@"TestJsonParser.json"]];
-    
     TestObject *t = [GICJsonParser parseObjectFromJsonData:jsonData withClass:[TestObject class]];
-    NSLog(t);
-    
+    NSLog(@"%@",t);
 }
 
 - (void)didReceiveMemoryWarning

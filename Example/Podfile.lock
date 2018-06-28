@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  JsonParser: 3d2653afd2d161e9ac1c7d49995aade45546b845
+  JsonParser: 1cea15a92deda7a27bdcedfa37733bc416b4ecb0
 
 PODFILE CHECKSUM: c59984cbfcfbfa25d21bdd3c7928d63b8dfd5a6c
 
