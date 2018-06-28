@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'JsonParser'
+  s.name             = 'GICJsonParser'
   s.version          = '0.5.0'
   s.summary          = '适用于Objective-C的json解析类库'
 
