@@ -6,6 +6,7 @@
 //
 
 #import "NSString+Extension.h"
+#import "GICJsonParser.h"
 
 @implementation NSString (Extension)
 -(id)gic_toJsonObject{

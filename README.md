@@ -1,4 +1,4 @@
-# JsonParser
+# GICJsonParser
 
 [![CI Status](https://img.shields.io/travis/龚海伟/JsonParser.svg?style=flat)](https://travis-ci.org/龚海伟/JsonParser)
 [![Version](https://img.shields.io/cocoapods/v/JsonParser.svg?style=flat)](https://cocoapods.org/pods/JsonParser)
@@ -9,9 +9,22 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## 安装
+
+JsonParser is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'GICJsonParser'
+```
+
+
+
 ## 介绍
 
-`JsonParser`专门用来处理在Objective-C中自动将Json数据转换成对象实例的类库。支持嵌套对象的解析、支持数组的解析、支持自定义属性名称到Json key的映射。一行代码就能搞定。
+`GICJsonParser`专门用来处理在Objective-C 、Swift中自动将Json数据转换成对象实例的类库。支持嵌套对象的解析、支持数组的解析、支持自定义属性名称到Json key的映射。一行代码就能搞定。
+
+
 
 ## 示例
 
@@ -128,10 +141,20 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 3. Step3 解析数据。
 
-   上面两部做好后，解析数据很简单，只需要一行代码就能解析。
+   上面两步做好后，解析数据很简单，只需要一行代码就能解析。解析有两种方式，一种是引入`<GICJsonParser/GICJsonParser.h>`头文件，直接使用`GICJsonParser`来解析。如下：
 
 ```objective-c
+#import <GICJsonParser/GICJsonParser.h>
+
 TestObject *t = [GICJsonParser parseObjectFromJsonData:jsonData withClass:[TestObject class]];
+```
+
+​	另外一种是引入`<GICJsonParser/NSObject+GICJsonParser.h>`头文件，使用NSObject的扩展方法来解析。如下
+
+```objective-c
+#import <GICJsonParser/NSObject+GICJsonParser.h>
+
+TestObject *t = [TestObject gic_jsonParseObjectFromJsonData:jsonData];
 ```
 
 
@@ -151,16 +174,30 @@ TestObject *t = [GICJsonParser parseObjectFromJsonData:jsonData withClass:[TestO
    > 有时候json数据中定义的key跟数据结构中定义的属性名称不一致，那么也可以通过实现`GICJsonParserDelegate`中的`jsonParsePropertNameMap`方法来明确告知解析器属性名称跟json key的映射关系。比如例子中的:testCustomPropertyNameMap 跟 customPropertyName 的映射关系。
 
 
+## 序列化
 
+使用 `GICJsonParser`你也可以将一个对象实例序列化成json数据。直接调用`GICJsonParser`的方法`objectSerializeToJsonData`即可实现。
 
-## 安装
-
-JsonParser is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'JsonParser'
+```objective-c
+TestObject *t = [TestObject gic_jsonParseObjectFromJsonData:jsonData];
+NSData *serJsonData = [GICJsonParser objectSerializeToJsonData:t];
+NSString *jsonString = [[NSString alloc] initWithData:serJsonData encoding:4];
+NSLog(@"%@",jsonString);
 ```
+
+同样你也可以直接将一个NSArray序列化成JSonData，只需要调用`objectArraySerializeToJsonData`方法即可。
+
+
+
+## Swift的支持
+
+类库本身就已经支持Swift。但是在Swift中使用的时候需要注意以下几点。
+
+1. 所有的数据类都继承自`NSObject`
+2. 由于在Swfit4中， 继承自NSObject的Swift class 不再默认 BRIDGE 到 OC了，因此需要在class前面加上`@objcMembers` 这么一个关键字
+3. 不支持对Int? Float?等值类型的可空解析。因此在定义swift class 的时候避免使用 值类型的可空类型。但是String、Array、Dictionary是可以定义成可空类型的。
+
+
 
 ## Author
 

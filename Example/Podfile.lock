@@ -1,5 +1,5 @@
 PODS:
-  - GICJsonParser (0.5.0)
+  - GICJsonParser (0.6.0)
 
 DEPENDENCIES:
   - GICJsonParser (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  GICJsonParser: 0422048046280a16c56a6df3109135561c29f706
+  GICJsonParser: 9f7a608505422da5869c35692c0d081ef5ad0305
 
 PODFILE CHECKSUM: 1ee78120ed7cccf78dcf859ef9ce8a54b58f55e7
 

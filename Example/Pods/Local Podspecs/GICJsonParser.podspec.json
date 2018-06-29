@@ -1,6 +1,6 @@
 {
   "name": "GICJsonParser",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "summary": "适用于Objective-C的json解析类库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/ghwghw4/JsonParser",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/ghwghw4/JsonParser.git",
-    "tag": "0.5.0"
+    "tag": "0.6.0"
   },
   "platforms": {
     "ios": "6.0"

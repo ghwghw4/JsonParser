@@ -13,6 +13,7 @@
 #import "GICJsonParser.h"
 #import "GICJsonParserDelegate.h"
 #import "GICReflectorPropertyInfo.h"
+#import "NSObject+GICJsonParser.h"
 #import "NSObject+Reflector.h"
 #import "NSString+Extension.h"
 

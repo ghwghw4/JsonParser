@@ -45,6 +45,8 @@
     objc_property_t *properties = class_copyPropertyList(klass, &propertyCount);
     for (unsigned int i = 0; i < propertyCount; ++i) {
         GICReflectorPropertyInfo * propertyInfo = [[GICReflectorPropertyInfo alloc] initWithProperty:properties[i]];
+        if([propertyInfo.propertyName isEqualToString:@"description"] || [propertyInfo.propertyName isEqualToString:@"debugDescription"])
+            continue;
         [propertyInfosMap setValue:propertyInfo forKey:propertyInfo.propertyName];
     }
     free(properties);//用完后释放

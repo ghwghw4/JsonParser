@@ -7,8 +7,8 @@
 //
 
 #import "GICViewController.h"
-#import "GICJsonParser.h"
 #import "TestObject.h"
+#import <GICJsonParser/NSObject+GICJsonParser.h>
 #import <GICJsonParser/GICJsonParser.h>
 
 @interface GICViewController ()
@@ -22,8 +22,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     NSData *jsonData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle].bundlePath stringByAppendingPathComponent:@"TestJsonParser.json"]];
-    TestObject *t = [GICJsonParser parseObjectFromJsonData:jsonData withClass:[TestObject class]];
-    NSLog(@"%@",t);
+    TestObject *t = [TestObject gic_jsonParseObjectFromJsonData:jsonData];
+    NSData *serJsonData = [GICJsonParser objectSerializeToJsonData:t];
+    NSString *jsonString = [[NSString alloc] initWithData:serJsonData encoding:4];
+    NSLog(@"%@",jsonString);
 }
 
 - (void)didReceiveMemoryWarning
