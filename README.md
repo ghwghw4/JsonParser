@@ -22,7 +22,7 @@ pod 'GICJsonParser'
 
 ## 介绍
 
-`GICJsonParser`专门用来处理在Objective-C 、Swift中自动将Json数据转换成对象实例的类库。支持嵌套对象的解析、支持数组的解析、支持自定义属性名称到Json key的映射。一行代码就能搞定。
+`GICJsonParser`专门用来处理在Objective-C 、Swift中自动将Json数据转换成对象实例的类库。支持嵌套对象的解析、支持数组的解析、支持自定义属性名称到Json key的映射,**同时也支持将实例对象序列化成Json数据**。一行代码就能搞定。
 
 
 
