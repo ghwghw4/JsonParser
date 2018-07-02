@@ -201,7 +201,7 @@ NSLog(@"%@",jsonString);
 
 ## Author
 
-海伟, 693963124@163.com
+海伟, 693963124@qq.com
 
 ## License
 
