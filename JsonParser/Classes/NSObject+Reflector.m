@@ -52,6 +52,8 @@
     free(properties);//用完后释放
     NSDictionary *map = [self gic_reflectProperties:class_getSuperclass(klass)];//递归获取父类的属性
     [propertyInfosMap addEntriesFromDictionary:map];
+    // 保存到缓存中
+    [self.gic_classPropertisInfoCache setValue:propertyInfosMap forKey:className];
     return propertyInfosMap;
 }
 @end

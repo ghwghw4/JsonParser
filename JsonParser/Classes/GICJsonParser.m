@@ -93,7 +93,7 @@
                 break;
         }
     }
-   
+    
     // 对象解析完成的回调
     if([target respondsToSelector:@selector(jsonParseObjetCompelete:)]){
         [target jsonParseObjetCompelete:jsonDict];
@@ -126,58 +126,41 @@
 
 
 +(NSDictionary *)objectSerializeToJsonDictionary:(id)target{
-    NSDictionary<NSString *,GICReflectorPropertyInfo *> * properties = [NSObject gic_reflectProperties:[target class]];
+    if([target isKindOfClass:[NSArray class]] || [target isKindOfClass:[NSString class]] || [target isKindOfClass:[NSNumber class]]){
+        return nil;
+    }
+    
+    NSDictionary<NSString *,id> *objectKVODictionary = nil;
+    if([target isKindOfClass:[NSDictionary class]]){
+        objectKVODictionary = target;
+    }else{
+        NSDictionary<NSString *,GICReflectorPropertyInfo *> *properties = [NSObject gic_reflectProperties:[target class]];
+        objectKVODictionary = [target dictionaryWithValuesForKeys:properties.allKeys];
+    }
+    
     NSDictionary<NSString *,NSString *> *propertyNameMap = nil;
     if([target respondsToSelector:@selector(jsonParsePropertNameMap)]){
         propertyNameMap = [target jsonParsePropertNameMap];
     }
-    
-    NSDictionary<NSString *,id> *objectKVODictionary = [target dictionaryWithValuesForKeys:properties.allKeys];
     NSMutableDictionary *serializeDictionary = [NSMutableDictionary dictionary];
-    
     for(NSString *propertyName in objectKVODictionary.allKeys){
         NSString *jsonKey = propertyName;
         if(propertyNameMap && [propertyNameMap.allValues containsObject:propertyName]){
             jsonKey = [[propertyNameMap allKeysForObject:propertyName] firstObject];
         }
-        GICReflectorPropertyInfo *pInfo = [properties objectForKey:propertyName];
         id value = [objectKVODictionary objectForKey:propertyName];
         if(!value || [value isKindOfClass:[NSNull class]])
             continue;
-        switch (pInfo.propertyType) {
-            case GICPropertyType_Int:
-            case GICPropertyType_Int8:
-            case GICPropertyType_Int16:
-            case GICPropertyType_Int32:
-            case GICPropertyType_UInt:
-            case GICPropertyType_UInt8:
-            case GICPropertyType_UInt16:
-            case GICPropertyType_UInt32:
-            case GICPropertyType_Double:
-            case GICPropertyType_Float:
-            case GICPropertyType_Number:
-            case GICPropertyType_Bool:
-            case GICPropertyType_Dictionary:
-            case GICPropertyType_String:{
-                [serializeDictionary setValue:value forKey:jsonKey];
-                break;
-            }
-                
-            case GICPropertyType_OtherNSObjectClass:{
-                [serializeDictionary setValue:[self objectSerializeToJsonDictionary:value] forKey:jsonKey];
-                break;
-            }
-                
-            case GICPropertyType_Array:{//解析array
-                [serializeDictionary setValue:[self objectArraySerializeToJsonArray:value] forKey:jsonKey];
-                break;
-            }
-            default:
-                break;
+        if([value isKindOfClass:[NSNumber class]] || [value isKindOfClass:[NSString class]]){
+            [serializeDictionary setValue:value forKey:jsonKey];
+        }else if ([value isKindOfClass:[NSDictionary class]]){
+            [serializeDictionary setValue:[self objectSerializeToJsonDictionary:value] forKey:jsonKey];
+        }else if ([value isKindOfClass:[NSArray class]]){
+            [serializeDictionary setValue:[self objectArraySerializeToJsonArray:value] forKey:jsonKey];
+        }else{
+            [serializeDictionary setValue:[self objectSerializeToJsonDictionary:value] forKey:jsonKey];
         }
-        
     }
-    
     return serializeDictionary;
 }
 
