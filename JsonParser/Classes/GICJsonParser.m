@@ -135,7 +135,11 @@
         objectKVODictionary = target;
     }else{
         NSDictionary<NSString *,GICReflectorPropertyInfo *> *properties = [NSObject gic_reflectProperties:[target class]];
-        objectKVODictionary = [target dictionaryWithValuesForKeys:properties.allKeys];
+        @try {
+            objectKVODictionary = [target dictionaryWithValuesForKeys:properties.allKeys];
+        } @catch (NSException *exception) {
+            // 该类的某些属性无法解析。事实上主要是某个属性不支持kvo
+        }
     }
     
     NSDictionary<NSString *,NSString *> *propertyNameMap = nil;
